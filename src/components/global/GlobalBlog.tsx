@@ -1,26 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { globalBlogPosts } from "@/data/globalBlogPosts";
 
-const posts = [
-  {
-    title: "7,500 Liters for a Pair of Jeans: The Water Cost of the Fashion You Wear",
-    date: "June 4, 2025",
-    excerpt: "The hidden environmental impact in a common piece of clothing… Have you ever stopped to think about the real cost of a pair of jeans?…",
-    link: "https://brightbrazil.co/en/blog/",
-  },
-  {
-    title: "Standing Forest vs. Cut Timber: The Value of Smart Conservation",
-    date: "June 4, 2025",
-    excerpt: "A standing forest can be worth more than cut timber…",
-    link: "https://brightbrazil.co/en/blog/",
-  },
-  {
-    title: "Upcycling: Fashion That Respects the Future",
-    date: "June 4, 2025",
-    excerpt: "Positive-impact fashion isn't a trend. It's direction…",
-    link: "https://brightbrazil.co/en/blog/",
-  },
-];
+const highlightedPosts = globalBlogPosts.slice(0, 3);
 
 const GlobalBlog = () => {
   return (
@@ -37,39 +20,47 @@ const GlobalBlog = () => {
             <span className="text-sm font-medium text-primary uppercase tracking-widest mb-4 block">Insights</span>
             <h2 className="text-3xl md:text-5xl font-display text-foreground leading-tight">Our Blog</h2>
           </div>
-          <a
-            href="https://brightbrazil.co/en/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/global/blog"
             className="hidden md:flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Read more <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </Link>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {posts.map((post, i) => (
-            <motion.a
-              key={post.title}
-              href={post.link}
-              target="_blank"
-              rel="noopener noreferrer"
+          {highlightedPosts.map((post, i) => (
+            <motion.div
+              key={post.slug}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card p-8 group cursor-pointer"
             >
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">{post.date}</span>
-              <h3 className="font-display text-lg text-foreground mt-3 mb-4 group-hover:text-primary transition-colors leading-snug">
-                {post.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Read More <ArrowUpRight className="w-3.5 h-3.5" />
-              </span>
-            </motion.a>
+              <Link
+                to={`/global/blog/${post.slug}`}
+                className="glass-card p-8 group cursor-pointer flex flex-col h-full"
+              >
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">{post.date}</span>
+                <h3 className="font-display text-lg text-foreground mt-3 mb-4 group-hover:text-primary transition-colors leading-snug">
+                  {post.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1">{post.excerpt}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                  Read More <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </Link>
+            </motion.div>
           ))}
+        </div>
+
+        <div className="mt-8 md:hidden text-center">
+          <Link
+            to="/global/blog"
+            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+          >
+            See all articles <ArrowUpRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
