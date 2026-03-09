@@ -34,6 +34,12 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <Link
+            to="/global"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            Global
+          </Link>
           <a
             href="#contact"
             className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
