@@ -29,7 +29,7 @@ const features = [
 
 const GlobalHero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-36 md:pt-40 pb-16">
       {/* Background */}
       <div className="absolute inset-0">
         <img src={globalHeroBg} alt="" className="w-full h-full object-cover" />
@@ -101,13 +101,15 @@ const GlobalHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="border-t border-secondary/15 pt-8"
+          className="border-t border-secondary/15 pt-8 overflow-hidden"
         >
           <p className="text-secondary/50 text-xs uppercase tracking-widest mb-5">Trusted by</p>
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {clients.map((c) => (
-              <span key={c} className="text-secondary/60 text-sm font-medium tracking-wide">{c}</span>
-            ))}
+          <div className="relative">
+            <div className="flex animate-marquee whitespace-nowrap gap-12">
+              {[...clients, ...clients, ...clients].map((c, i) => (
+                <span key={`${c}-${i}`} className="text-secondary/70 text-xl md:text-2xl font-semibold tracking-wide">{c}</span>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
