@@ -5,26 +5,34 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/bright-logo.png";
 
 const navLinks = [
-  { label: "A Empresa", href: "#about" },
-  { label: "Soluções", href: "#solutions" },
-  { label: "Fundadoras", href: "#founders" },
-  { label: "ESG", href: "#esg" },
+  { label: "About", href: "#about" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "Founders", href: "#founders" },
+  { label: "Our Passion", href: "#passion" },
+  { label: "Social Media", href: "#social" },
+  { label: "Contact", href: "#contact" },
   { label: "Blog", href: "#blog" },
-  { label: "Contato", href: "#contact" },
 ];
 
-const Navbar = () => {
+const GlobalNavbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex-shrink-0">
-          <img src={logo} alt="B.Right Logo" className="h-10 md:h-12" />
+      {/* Top banner */}
+      <div className="bg-primary text-primary-foreground text-center py-2 px-4">
+        <a href="#masterclass" className="text-sm font-medium hover:underline">
+          Join our Masterclass: ESG & Communication in Practice →
         </a>
+      </div>
+
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <Link to="/global" className="flex-shrink-0">
+          <img src={logo} alt="B.Right Logo" className="h-10 md:h-12" />
+        </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -34,22 +42,16 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Link
-            to="/global"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Global
-          </Link>
           <a
-            href="#contact"
+            href="#meeting"
             className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
           >
-            Agende uma reunião
+            Schedule a meeting
           </a>
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
+        <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -61,7 +63,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -74,19 +76,12 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Link
-                to="/global"
-                onClick={() => setOpen(false)}
-                className="text-base font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Global
-              </Link>
               <a
-                href="#contact"
+                href="#meeting"
                 onClick={() => setOpen(false)}
                 className="text-base font-medium bg-primary text-primary-foreground px-5 py-3 rounded-full text-center hover:opacity-90 transition-opacity"
               >
-                Agende uma reunião
+                Schedule a meeting
               </a>
             </div>
           </motion.div>
@@ -96,4 +91,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default GlobalNavbar;
