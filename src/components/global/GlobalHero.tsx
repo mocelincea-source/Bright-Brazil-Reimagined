@@ -1,21 +1,45 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Shield, BarChart3, Megaphone, Gamepad2 } from "lucide-react";
+import globalHeroBg from "@/assets/global-hero-bg.jpg";
 
 const clients = ["Syngenta", "HRZ", "Vtall", "Cargopetro", "New Expo", "Rift Distribuidora", "C. Romero Advocacia"];
 
+const features = [
+  {
+    icon: Shield,
+    title: "EU-ready ESG Support",
+    desc: "Strategy, implementation, governance and reporting",
+  },
+  {
+    icon: BarChart3,
+    title: "International Standards",
+    desc: "Alignment with IFRS S1 & S2 and leading ESG frameworks",
+  },
+  {
+    icon: Megaphone,
+    title: "ESG Communication",
+    desc: "Videos, presentations, social media, landing pages and talks",
+  },
+  {
+    icon: Gamepad2,
+    title: "Gamified Training",
+    desc: "ESG & Compliance training to embed ESG into culture and decision-making",
+  },
+];
+
 const GlobalHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-16">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/70" />
+        <img src={globalHeroBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-foreground/75" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 max-w-5xl mx-auto text-center">
+      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full">
         <motion.h1
-          className="text-3xl md:text-5xl lg:text-6xl font-display text-secondary leading-tight mb-6"
+          className="text-3xl md:text-5xl lg:text-[3.25rem] font-display text-secondary leading-tight mb-5 max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -24,7 +48,7 @@ const GlobalHero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-secondary/85 max-w-3xl mx-auto mb-8 leading-relaxed"
+          className="text-base md:text-lg text-secondary/80 max-w-2xl mb-10 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
@@ -32,33 +56,41 @@ const GlobalHero = () => {
           B.Right helps organisations align ESG strategy, reporting, governance and stakeholder engagement with EU expectations — turning compliance into credibility, value, and competitive advantage.
         </motion.p>
 
-        <motion.ul
-          className="text-secondary/80 text-sm md:text-base space-y-2 max-w-2xl mx-auto mb-10 text-left"
+        {/* Feature cards */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <li className="flex items-start gap-2"><span className="text-accent mt-1">✦</span> EU-ready ESG support (strategy, implementation, governance and reporting)</li>
-          <li className="flex items-start gap-2"><span className="text-accent mt-1">✦</span> Alignment with international standards (including IFRS S1 & S2 and leading ESG frameworks)</li>
-          <li className="flex items-start gap-2"><span className="text-accent mt-1">✦</span> ESG communication for internal and external audiences (videos, presentations, social media, landing pages, talks)</li>
-          <li className="flex items-start gap-2"><span className="text-accent mt-1">✦</span> Gamified ESG & Compliance training to embed ESG into culture and decision-making</li>
-        </motion.ul>
+          {features.map((f) => (
+            <div
+              key={f.title}
+              className="bg-secondary/10 backdrop-blur-md border border-secondary/15 rounded-xl p-5 flex flex-col gap-3"
+            >
+              <f.icon className="w-7 h-7 text-accent" />
+              <h3 className="text-secondary font-medium text-sm leading-snug">{f.title}</h3>
+              <p className="text-secondary/65 text-xs leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </motion.div>
 
+        {/* CTAs */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
         >
           <a
             href="#meeting"
-            className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity"
+            className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity text-center"
           >
             Schedule a free-of-charge meeting
           </a>
           <a
             href="#solutions"
-            className="border border-secondary/30 text-secondary px-8 py-3.5 rounded-full font-medium text-base hover:bg-secondary/10 transition-colors"
+            className="border border-secondary/30 text-secondary px-8 py-3.5 rounded-full font-medium text-base hover:bg-secondary/10 transition-colors text-center"
           >
             See our ESG Solutions
           </a>
@@ -71,8 +103,8 @@ const GlobalHero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="border-t border-secondary/15 pt-8"
         >
-          <p className="text-secondary/50 text-xs uppercase tracking-widest mb-6">Trusted by</p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          <p className="text-secondary/50 text-xs uppercase tracking-widest mb-5">Trusted by</p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
             {clients.map((c) => (
               <span key={c} className="text-secondary/60 text-sm font-medium tracking-wide">{c}</span>
             ))}
