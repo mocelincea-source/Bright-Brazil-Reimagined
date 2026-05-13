@@ -30,6 +30,7 @@ interface Props {
 const ClientsMarquee = ({ label = "Trusted by", variant = "light" }: Props) => {
   const labelColor = variant === "light" ? "text-secondary/50" : "text-muted-foreground";
   const borderColor = variant === "light" ? "border-secondary/15" : "border-border";
+  const imgFilter = variant === "dark" ? "invert" : "";
 
   return (
     <div className={`border-t ${borderColor} pt-8 overflow-hidden`}>
@@ -41,7 +42,7 @@ const ClientsMarquee = ({ label = "Trusted by", variant = "light" }: Props) => {
               key={`${logo.alt}-${i}`}
               src={logo.src}
               alt={logo.alt}
-              className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
+              className={`h-12 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 ${imgFilter}`}
               loading="lazy"
             />
           ))}
