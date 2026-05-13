@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, BarChart3, Megaphone, Gamepad2 } from "lucide-react";
 import globalHeroBg from "@/assets/global-hero-bg.jpg";
-
-const clients = ["Syngenta", "HRZ", "Vtall", "Cargopetro", "New Expo", "Rift Distribuidora", "C. Romero Advocacia"];
+import ClientsMarquee from "@/components/ClientsMarquee";
 
 const features = [
   {
@@ -101,16 +100,8 @@ const GlobalHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="border-t border-secondary/15 pt-8 overflow-hidden"
         >
-          <p className="text-secondary/50 text-xs uppercase tracking-widest mb-5">Trusted by</p>
-          <div className="relative">
-            <div className="flex animate-marquee whitespace-nowrap gap-12">
-              {[...clients, ...clients, ...clients].map((c, i) => (
-                <span key={`${c}-${i}`} className="text-secondary/70 text-xl md:text-2xl font-semibold tracking-wide">{c}</span>
-              ))}
-            </div>
-          </div>
+          <ClientsMarquee label="Trusted by" variant="light" />
         </motion.div>
       </div>
     </section>
