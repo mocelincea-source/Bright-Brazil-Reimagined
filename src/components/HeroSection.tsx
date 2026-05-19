@@ -23,12 +23,6 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
         </div>
 
-        {/* Faded brand wordmark on top */}
-        <div className="absolute top-6 md:top-10 left-0 right-0 flex justify-center pointer-events-none overflow-hidden">
-          <span className="font-display font-black text-background/15 text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase whitespace-nowrap select-none">
-            B.RIGHT ESG
-          </span>
-        </div>
 
         {/* Bottom content area */}
         <div className="relative z-10 px-6 md:px-12 pb-10 md:pb-14 pt-32">
