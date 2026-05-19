@@ -2,16 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const stats = [
-  { value: "+15", label: "Anos de experiência em ESG" },
-  { value: "100%", label: "Foco em resultados sustentáveis" },
-];
-
-const metrics = [
-  { value: "10+", label: "Setores atendidos" },
-  { value: "30+", label: "Projetos entregues" },
-  { value: "5+", label: "Frameworks dominados" },
-];
 
 const HeroSection = () => {
   return (
