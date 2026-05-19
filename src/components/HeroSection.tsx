@@ -2,16 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const stats = [
-  { value: "+15", label: "Anos de experiência em ESG" },
-  { value: "100%", label: "Foco em resultados sustentáveis" },
-];
-
-const metrics = [
-  { value: "10+", label: "Setores atendidos" },
-  { value: "30+", label: "Projetos entregues" },
-  { value: "5+", label: "Frameworks dominados" },
-];
 
 const HeroSection = () => {
   return (
@@ -23,12 +13,6 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
         </div>
 
-        {/* Faded brand wordmark on top */}
-        <div className="absolute top-6 md:top-10 left-0 right-0 flex justify-center pointer-events-none overflow-hidden">
-          <span className="font-display font-black text-background/15 text-[14vw] md:text-[11vw] leading-none tracking-tight uppercase whitespace-nowrap select-none">
-            B.RIGHT ESG
-          </span>
-        </div>
 
         {/* Bottom content area */}
         <div className="relative z-10 px-6 md:px-12 pb-10 md:pb-14 pt-32">
@@ -88,30 +72,27 @@ const HeroSection = () => {
               </motion.div>
             </div>
 
-            {/* Stat cards */}
+            {/* Mission card */}
             <motion.div
-              className="md:col-span-5 grid grid-cols-2 gap-3"
+              className="md:col-span-5 md:justify-self-end w-full md:max-w-sm"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-background/15 backdrop-blur-xl border border-background/25 rounded-2xl p-5"
+              <div className="bg-background/15 backdrop-blur-xl border border-background/25 rounded-2xl p-6">
+                <span className="text-xs font-medium text-accent uppercase tracking-widest mb-3 block">
+                  Nossa missão
+                </span>
+                <p className="text-sm md:text-base text-background/90 leading-relaxed mb-4">
+                  Elevar organizações à excelência sustentável, transformando ESG em vantagem competitiva real.
+                </p>
+                <a
+                  href="#about"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-background hover:text-accent transition-colors"
                 >
-                  <div className="text-3xl md:text-4xl font-display font-black text-background mb-1">{s.value}</div>
-                  <div className="text-xs text-background/75 leading-snug">{s.label}</div>
-                </div>
-              ))}
-
-              <div className="col-span-2 bg-background/10 backdrop-blur-xl border border-background/20 rounded-2xl px-5 py-4 flex items-center justify-around">
-                {metrics.map((m) => (
-                  <div key={m.label} className="text-center">
-                    <div className="text-xl md:text-2xl font-display font-bold text-accent">{m.value}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-background/70 mt-0.5">{m.label}</div>
-                  </div>
-                ))}
+                  Saiba mais
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </motion.div>
           </div>
