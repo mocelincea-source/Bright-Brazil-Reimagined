@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Archivo', 'sans-serif'],
+        display: ['Bricolage Grotesque', 'sans-serif'],
         body: ['Manrope', 'sans-serif'],
       },
       colors: {
