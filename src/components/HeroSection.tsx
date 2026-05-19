@@ -82,30 +82,27 @@ const HeroSection = () => {
               </motion.div>
             </div>
 
-            {/* Stat cards */}
+            {/* Mission card */}
             <motion.div
-              className="md:col-span-5 grid grid-cols-2 gap-3"
+              className="md:col-span-5 md:justify-self-end w-full md:max-w-sm"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-background/15 backdrop-blur-xl border border-background/25 rounded-2xl p-5"
+              <div className="bg-background/15 backdrop-blur-xl border border-background/25 rounded-2xl p-6">
+                <span className="text-xs font-medium text-accent uppercase tracking-widest mb-3 block">
+                  Nossa missão
+                </span>
+                <p className="text-sm md:text-base text-background/90 leading-relaxed mb-4">
+                  Elevar organizações à excelência sustentável, transformando ESG em vantagem competitiva real.
+                </p>
+                <a
+                  href="#about"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-background hover:text-accent transition-colors"
                 >
-                  <div className="text-3xl md:text-4xl font-display font-black text-background mb-1">{s.value}</div>
-                  <div className="text-xs text-background/75 leading-snug">{s.label}</div>
-                </div>
-              ))}
-
-              <div className="col-span-2 bg-background/10 backdrop-blur-xl border border-background/20 rounded-2xl px-5 py-4 flex items-center justify-around">
-                {metrics.map((m) => (
-                  <div key={m.label} className="text-center">
-                    <div className="text-xl md:text-2xl font-display font-bold text-accent">{m.value}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-background/70 mt-0.5">{m.label}</div>
-                  </div>
-                ))}
+                  Saiba mais
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </motion.div>
           </div>
