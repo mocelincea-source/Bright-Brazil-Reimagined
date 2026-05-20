@@ -18,16 +18,16 @@ const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden h-screen min-h-[640px] -mt-px">
       {/* Rotating backgrounds */}
-      <AnimatePresence mode="sync">
+      <AnimatePresence mode="popLayout">
         <motion.img
           key={index}
           src={images[index]}
           alt="ESG e sustentabilidade"
           className="absolute inset-0 w-full h-full object-cover"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ opacity: { duration: 1.4 }, scale: { duration: 6, ease: "easeOut" } }}
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "-100%" }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
           width={1920}
           height={1280}
         />
