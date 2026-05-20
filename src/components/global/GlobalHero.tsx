@@ -52,7 +52,7 @@ const GlobalHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
-          B.Right helps organisations align ESG strategy, reporting, governance and stakeholder engagement with EU expectations — turning compliance into credibility, value, and competitive advantage.
+          B.Right helps organisations align ESG strategy, reporting, governance and stakeholder engagement with EU expectations, turning compliance into credibility, value, and competitive advantage.
         </motion.p>
 
         {/* Feature cards */}

@@ -18,7 +18,7 @@ export const blogPosts: BRBlogPost[] = [
     cta: "Quer estruturar o reporte ESG da sua empresa segundo IFRS S1 e S2? Fale com nossos especialistas.",
     content: [
       "Em 2026, os padrões IFRS S1 e IFRS S2 deixam de ser apenas um tema de preparação e passam a fazer parte da realidade operacional das empresas brasileiras e globais. O que antes era discutido como tendência regulatória, agora é exigência prática para companhias que buscam acesso a capital, credibilidade junto a investidores e alinhamento com as melhores práticas internacionais de divulgação.",
-      "O IFRS S1 estabelece os requisitos gerais para a divulgação de informações financeiras relacionadas à sustentabilidade, enquanto o IFRS S2 foca especificamente em riscos e oportunidades climáticas. Juntos, eles formam a nova base global de relato — adotada também pelo Brasil via CVM.",
+      "O IFRS S1 estabelece os requisitos gerais para a divulgação de informações financeiras relacionadas à sustentabilidade, enquanto o IFRS S2 foca especificamente em riscos e oportunidades climáticas. Juntos, eles formam a nova base global de relato, adotada também pelo Brasil via CVM.",
       "Para sair da fase de preparação e atingir maturidade operacional, as empresas precisam:",
     ],
     lists: [
@@ -47,7 +47,7 @@ export const blogPosts: BRBlogPost[] = [
     cta: "Conheça nossos treinamentos gamificados de ESG e Compliance.",
     content: [
       "O ESG deixou de ser um conceito teórico e passou a ser parte central da estratégia empresarial. Porém, nenhuma estratégia se concretiza sem pessoas capacitadas para executá-la no dia a dia.",
-      "Treinar colaboradores em ESG vai muito além de cumprir uma exigência regulatória ou de auditoria. É o que garante que políticas, metas e relatórios se traduzam em comportamentos reais — em decisões de compras, processos, relacionamento com fornecedores, atendimento ao cliente e governança.",
+      "Treinar colaboradores em ESG vai muito além de cumprir uma exigência regulatória ou de auditoria. É o que garante que políticas, metas e relatórios se traduzam em comportamentos reais, em decisões de compras, processos, relacionamento com fornecedores, atendimento ao cliente e governança.",
       "Treinamentos ESG bem estruturados geram:",
     ],
     lists: [
@@ -62,7 +62,7 @@ export const blogPosts: BRBlogPost[] = [
       },
       {
         intro:
-          "Quando o aprendizado é gamificado, com simulações, narrativas e desafios, o conteúdo é melhor absorvido e aplicado. Pessoas treinadas tomam decisões melhores — e é aí que ESG deixa de ser slide e vira resultado.",
+          "Quando o aprendizado é gamificado, com simulações, narrativas e desafios, o conteúdo é melhor absorvido e aplicado. Pessoas treinadas tomam decisões melhores, e é aí que ESG deixa de ser slide e vira resultado.",
         items: [],
       },
     ],
@@ -76,7 +76,7 @@ export const blogPosts: BRBlogPost[] = [
     cta: "Saiba como integrar ESG e governança em projetos de cidades inteligentes.",
     content: [
       "As cidades inteligentes deixaram de ser um conceito futurista e se tornaram uma agenda estratégica global. Tecnologia, sustentabilidade e governança caminham juntas para responder aos desafios urbanos do século XXI: mudanças climáticas, mobilidade, inclusão, segurança e eficiência dos serviços públicos.",
-      "Mas ser uma cidade inteligente vai muito além de instalar sensores e aplicativos. Exige uma visão integrada de ESG aplicada ao território — equilibrando impacto ambiental, equidade social e governança transparente.",
+      "Mas ser uma cidade inteligente vai muito além de instalar sensores e aplicativos. Exige uma visão integrada de ESG aplicada ao território, equilibrando impacto ambiental, equidade social e governança transparente.",
       "Os pilares de uma cidade inteligente sustentável incluem:",
     ],
     lists: [
@@ -91,7 +91,7 @@ export const blogPosts: BRBlogPost[] = [
       },
       {
         intro:
-          "Quando tecnologia, ESG e governança caminham juntas, as cidades se tornam mais resilientes, eficientes e humanas — e geram valor para cidadãos, empresas e investidores.",
+          "Quando tecnologia, ESG e governança caminham juntas, as cidades se tornam mais resilientes, eficientes e humanas, e geram valor para cidadãos, empresas e investidores.",
         items: [],
       },
     ],
