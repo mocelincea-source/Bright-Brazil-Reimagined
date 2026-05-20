@@ -29,11 +29,10 @@ interface Props {
 
 const ClientsMarquee = ({ label = "Trusted by", variant = "light" }: Props) => {
   const labelColor = variant === "light" ? "text-secondary/50" : "text-muted-foreground";
-  const borderColor = variant === "light" ? "border-secondary/15" : "border-border";
   const imgFilter = variant === "dark" ? "invert" : "";
 
   return (
-    <div className={`border-t ${borderColor} pt-8 overflow-hidden`}>
+    <div className="overflow-hidden">
       <p className={`${labelColor} text-xs uppercase tracking-widest mb-6 text-center`}>{label}</p>
       <div className="relative">
         <div className="flex animate-marquee whitespace-nowrap items-center gap-16">
