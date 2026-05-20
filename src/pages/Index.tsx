@@ -15,7 +15,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <section className="pt-12 pb-8 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <ClientsMarquee label="Clientes que confiam na B.Right" variant="dark" />
         </div>
       </section>

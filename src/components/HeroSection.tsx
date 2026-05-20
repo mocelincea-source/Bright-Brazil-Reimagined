@@ -48,7 +48,7 @@ const HeroSection = () => {
 
       {/* Bottom content */}
       <div className="absolute inset-x-0 bottom-0 z-10 px-6 md:px-12 lg:px-20 pb-10 md:pb-16">
-        <div className="grid md:grid-cols-12 gap-8 items-end max-w-[1600px] mx-auto">
+        <div className="grid md:grid-cols-12 gap-8 items-end max-w-7xl mx-auto">
           <div className="md:col-span-8">
             <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-display font-light text-background leading-[1.02] tracking-tight mb-6"
@@ -112,7 +112,7 @@ const HeroSection = () => {
         </div>
 
         {/* Pagination dots */}
-        <div className="max-w-[1600px] mx-auto flex gap-2 mt-8">
+        <div className="max-w-7xl mx-auto flex gap-2 mt-8">
           {images.map((_, i) => (
             <button
               key={i}

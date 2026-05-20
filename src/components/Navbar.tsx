@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-4 md:top-6 left-0 right-0 z-50 px-4">
-      <div className="max-w-6xl mx-auto bg-foreground/85 backdrop-blur-xl border border-foreground/20 rounded-full pl-4 pr-2 py-2 flex items-center justify-between shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.4)]">
+      <div className="max-w-7xl mx-auto bg-foreground/85 backdrop-blur-xl border border-foreground/20 rounded-full pl-4 pr-2 py-2 flex items-center justify-between shadow-[0_8px_32px_-8px_hsl(var(--foreground)/0.4)]">
         <a href="#" className="flex-shrink-0 pl-2">
           <img src={logo} alt="B.Right" className="h-8 md:h-9 brightness-0 invert" />
         </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mt-2 max-w-6xl mx-auto bg-foreground/95 backdrop-blur-xl border border-foreground/20 rounded-3xl overflow-hidden"
+            className="md:hidden mt-2 max-w-7xl mx-auto bg-foreground/95 backdrop-blur-xl border border-foreground/20 rounded-3xl overflow-hidden"
           >
             <div className="px-6 py-5 flex flex-col gap-3">
               {navLinks.map((link) => (
