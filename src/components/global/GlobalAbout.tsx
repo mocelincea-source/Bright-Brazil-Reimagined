@@ -24,7 +24,7 @@ const GlobalAbout = () => {
             B.Right specialises in ESG (Environmental, Social and Governance), providing comprehensive services to create positive impact for organisations. Our consultancy integrates responsible environmental practices, corporate social responsibility, and transparent governance across operational areas.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mt-4">
-            Our goal is to drive organisations toward sustainable excellence and the achievement of the Sustainable Development Goals (SDGs) of the United Nations Global Compact — exceeding conventional expectations.
+            Our goal is to drive organisations toward sustainable excellence and the achievement of the Sustainable Development Goals (SDGs) of the United Nations Global Compact, exceeding conventional expectations.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mt-4">
             Committed to a mission of meaningful reach, we seek to contribute substantially to organisations by raising awareness of ESG's essential pillars. Guided by core values such as Sustainable Innovation, Consistent Results, and Integrity, our consultancy weaves sustainability and social responsibility into every stage of our operations, providing a safe and smooth path toward an ethical and sustainable business future.

@@ -19,7 +19,7 @@ const categories: { key: string; label: string; intro: string; items: Solution[]
     label: "Relatórios",
     intro: "Reportes claros, auditáveis e alinhados aos principais frameworks globais de sustentabilidade.",
     items: [
-      { num: "03", title: "Relatórios de Sustentabilidade", desc: "IFRS S1, S2, GRI, SASB — completos, transparentes e em conformidade com padrões globais." },
+      { num: "03", title: "Relatórios de Sustentabilidade", desc: "IFRS S1, S2, GRI, SASB, completos, transparentes e em conformidade com padrões globais." },
       { num: "09", title: "Implementação IFRS S1 e S2", desc: "Adequação completa da estrutura de reporte aos novos padrões internacionais." },
       { num: "10", title: "Consolidação de Indicadores ESG", desc: "Organizamos, validamos e consolidamos indicadores estratégicos da sua empresa." },
     ],
@@ -38,7 +38,7 @@ const categories: { key: string; label: string; intro: string; items: Solution[]
     label: "Clima",
     intro: "Da medição de emissões aos planos de transição para uma economia de baixo carbono.",
     items: [
-      { num: "06", title: "Inventário de emissões — GHG Protocol e CDP", desc: "Inventários completos seguindo os principais protocolos internacionais." },
+      { num: "06", title: "Inventário de emissões, GHG Protocol e CDP", desc: "Inventários completos seguindo os principais protocolos internacionais." },
       { num: "07", title: "Planos de transição climática", desc: "Riscos físicos, de transição e oportunidades na rota para baixo carbono." },
     ],
   },
@@ -47,7 +47,7 @@ const categories: { key: string; label: string; intro: string; items: Solution[]
     label: "Regulação",
     intro: "Adequação a exigências regulatórias nacionais e internacionais e certificações reconhecidas.",
     items: [
-      { num: "08", title: "Adequação a regulações", desc: "CVM, Susep, Bacen, IFRS, União Europeia e EUA — sem zonas cinzentas." },
+      { num: "08", title: "Adequação a regulações", desc: "CVM, Susep, Bacen, IFRS, União Europeia e EUA, sem zonas cinzentas." },
       { num: "11", title: "Certificação Sistema B (B Lab)", desc: "Assessoria completa para obter a certificação Empresa B pelo B Lab Brasil." },
       { num: "12", title: "ISO 14001 e Selo Pró-Ética", desc: "Caminho estruturado para certificações de sustentabilidade e governança." },
     ],

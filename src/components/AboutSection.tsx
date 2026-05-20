@@ -12,7 +12,7 @@ const tabs = [
     headline:
       "Combinamos profundidade técnica em ESG com visão estratégica de negócio para transformar compliance em valor competitivo real.",
     description:
-      "Cada projeto é desenhado para gerar impacto mensurável — ambiental, social e econômico — sustentando organizações em jornadas de longo prazo.",
+      "Cada projeto é desenhado para gerar impacto mensurável, ambiental, social e econômico, sustentando organizações em jornadas de longo prazo.",
   },
   {
     key: "trajetoria",
@@ -21,7 +21,7 @@ const tabs = [
     headline:
       "Mais de uma década apoiando empresas brasileiras e globais a estruturar estratégias ESG robustas e auditáveis.",
     description:
-      "Acompanhamos a evolução dos frameworks GRI, SASB, TCFD e agora IFRS S1 e S2 — sempre à frente das exigências regulatórias.",
+      "Acompanhamos a evolução dos frameworks GRI, SASB, TCFD e agora IFRS S1 e S2, sempre à frente das exigências regulatórias.",
   },
   {
     key: "visao",
@@ -53,7 +53,7 @@ const stats = [
   {
     value: "98%",
     title: "Aderência a frameworks",
-    desc: "Nossos relatórios atendem integralmente a IFRS S1, S2, GRI e SASB — auditáveis e prontos para investidores.",
+    desc: "Nossos relatórios atendem integralmente a IFRS S1, S2, GRI e SASB, auditáveis e prontos para investidores.",
     highlight: true,
   },
 ];

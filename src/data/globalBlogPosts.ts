@@ -18,7 +18,7 @@ export const globalBlogPosts: BlogPost[] = [
     content: [
       "The Corporate Sustainability Reporting Directive (CSRD) marks a turning point in how companies operating in or with the European Union must report sustainability information. Far beyond a regulatory update, CSRD raises the bar for transparency, accountability, and ESG integration into corporate strategy.",
       "Thousands of companies will soon be required to disclose detailed information on environmental impact, social practices, governance, risks, and opportunities. This includes structured sustainability reports, double materiality assessments, climate-related risks, transition plans, and value chain impacts.",
-      "For many organisations, the biggest challenge is not reporting itself — but building the systems, governance, data processes, and internal culture needed to sustain ongoing compliance.",
+      "For many organisations, the biggest challenge is not reporting itself, but building the systems, governance, data processes, and internal culture needed to sustain ongoing compliance.",
       "Companies that start early gain three strategic advantages:",
     ],
     lists: [
@@ -30,7 +30,7 @@ export const globalBlogPosts: BlogPost[] = [
         ],
       },
       {
-        intro: "CSRD should not be treated as a last-minute obligation — but as an opportunity to strengthen resilience, transparency, and long-term value creation.",
+        intro: "CSRD should not be treated as a last-minute obligation, but as an opportunity to strengthen resilience, transparency, and long-term value creation.",
         items: [],
       },
     ],
@@ -56,7 +56,7 @@ export const globalBlogPosts: BlogPost[] = [
         ],
       },
       {
-        intro: "The key shift is mindset. Reporting should reflect real strategy, real execution, and real impact — not just promises or polished narratives.",
+        intro: "The key shift is mindset. Reporting should reflect real strategy, real execution, and real impact, not just promises or polished narratives.",
         items: [],
       },
       {
@@ -69,10 +69,10 @@ export const globalBlogPosts: BlogPost[] = [
     slug: "double-materiality-explained",
     title: "Double Materiality Explained: How EU Companies Should Prioritize ESG Topics",
     date: "June 4, 2025",
-    excerpt: "Double materiality is one of the most important — and misunderstood — pillars of European sustainability regulation…",
+    excerpt: "Double materiality is one of the most important, and misunderstood, pillars of European sustainability regulation…",
     cta: "Explore how to structure a robust Double Materiality Matrix.",
     content: [
-      "Double materiality is one of the most important — and misunderstood — pillars of European sustainability regulation.",
+      "Double materiality is one of the most important, and misunderstood, pillars of European sustainability regulation.",
       "Unlike traditional materiality, which focuses only on financial impact on the company, double materiality evaluates both:",
     ],
     lists: [
@@ -83,7 +83,7 @@ export const globalBlogPosts: BlogPost[] = [
         ],
       },
       {
-        intro: "This approach helps organisations prioritize what truly matters — not based on trends, but on risk, impact, regulation, and stakeholder expectations.",
+        intro: "This approach helps organisations prioritize what truly matters, not based on trends, but on risk, impact, regulation, and stakeholder expectations.",
         items: [],
       },
       {
@@ -111,7 +111,7 @@ export const globalBlogPosts: BlogPost[] = [
       "European regulators and consumers are increasingly vigilant about ESG communication. Two major risks now shape corporate messaging: greenwashing (overstating sustainability claims) and greenhushing (under-communicating real initiatives out of fear of criticism).",
       "Both can damage trust.",
       "Greenwashing exposes companies to legal, regulatory, and reputational risk. Greenhushing wastes strategic value by hiding real progress and credibility.",
-      "The solution lies in clear, evidence-based, and proportionate communication — grounded in data, governance, and transparency.",
+      "The solution lies in clear, evidence-based, and proportionate communication, grounded in data, governance, and transparency.",
       "Effective ESG communication should:",
     ],
     lists: [
@@ -124,7 +124,7 @@ export const globalBlogPosts: BlogPost[] = [
         ],
       },
       {
-        intro: "Trust is built not by silence or hype — but by clarity, consistency, and proof.",
+        intro: "Trust is built not by silence or hype, but by clarity, consistency, and proof.",
         items: [],
       },
     ],
@@ -133,10 +133,10 @@ export const globalBlogPosts: BlogPost[] = [
     slug: "esg-communication-eu-trust",
     title: "ESG Communication in the EU: How to Build Trust with Regulators, Investors and Stakeholders",
     date: "June 4, 2025",
-    excerpt: "In Europe, ESG communication is no longer a branding exercise — it is part of regulatory accountability…",
+    excerpt: "In Europe, ESG communication is no longer a branding exercise, it is part of regulatory accountability…",
     cta: "Discover how structured ESG communication strengthens credibility.",
     content: [
-      "In Europe, ESG communication is no longer a branding exercise — it is part of regulatory accountability, investor due diligence, and corporate governance.",
+      "In Europe, ESG communication is no longer a branding exercise, it is part of regulatory accountability, investor due diligence, and corporate governance.",
       "Companies must communicate ESG in ways that are:",
     ],
     lists: [
@@ -189,10 +189,10 @@ export const globalBlogPosts: BlogPost[] = [
     slug: "esg-risk-management-europe",
     title: "ESG Risk Management: How European Companies Can Anticipate Regulatory and Climate Risks",
     date: "June 4, 2025",
-    excerpt: "ESG risks in Europe now extend beyond reputation — they include regulatory enforcement, climate exposure, and more…",
+    excerpt: "ESG risks in Europe now extend beyond reputation, they include regulatory enforcement, climate exposure, and more…",
     cta: "Explore how to structure ESG risk management effectively.",
     content: [
-      "ESG risks in Europe now extend beyond reputation — they include regulatory enforcement, climate exposure, supply chain disruptions, and capital access constraints.",
+      "ESG risks in Europe now extend beyond reputation, they include regulatory enforcement, climate exposure, supply chain disruptions, and capital access constraints.",
       "Key ESG risk categories include:",
     ],
     lists: [
@@ -216,7 +216,7 @@ export const globalBlogPosts: BlogPost[] = [
         ],
       },
       {
-        intro: "Managing ESG risks proactively is not just defensive — it is a resilience strategy.",
+        intro: "Managing ESG risks proactively is not just defensive, it is a resilience strategy.",
         items: [],
       },
     ],
@@ -229,7 +229,7 @@ export const globalBlogPosts: BlogPost[] = [
     cta: "Learn how to translate ESG strategy into operational reality.",
     content: [
       "Many organisations publish ESG strategies. Few execute them effectively.",
-      "The real differentiator in ESG today is implementation — embedding ESG into:",
+      "The real differentiator in ESG today is implementation, embedding ESG into:",
     ],
     lists: [
       {
@@ -256,7 +256,7 @@ export const globalBlogPosts: BlogPost[] = [
     excerpt: "Embedding ESG into corporate culture is one of the biggest challenges. Policies alone do not change behaviour…",
     cta: "Discover how gamified ESG training strengthens organisational culture.",
     content: [
-      "Embedding ESG into corporate culture is one of the biggest challenges for European organisations. Policies alone do not change behaviour — people do.",
+      "Embedding ESG into corporate culture is one of the biggest challenges for European organisations. Policies alone do not change behaviour, people do.",
       "Gamified ESG and Compliance training increases:",
     ],
     lists: [
@@ -268,7 +268,7 @@ export const globalBlogPosts: BlogPost[] = [
         items: [],
       },
       {
-        intro: "Sustainable change happens when ESG becomes part of daily decisions — not just annual reports.",
+        intro: "Sustainable change happens when ESG becomes part of daily decisions, not just annual reports.",
         items: [],
       },
     ],
@@ -288,11 +288,11 @@ export const globalBlogPosts: BlogPost[] = [
         items: ["Banks", "Asset managers", "Corporate issuers", "Investors", "Financial advisors"],
       },
       {
-        intro: "Companies must ensure ESG claims are accurate, data-backed, and aligned with investor sustainability preferences — reducing legal and reputational risk while unlocking new funding opportunities.",
+        intro: "Companies must ensure ESG claims are accurate, data-backed, and aligned with investor sustainability preferences, reducing legal and reputational risk while unlocking new funding opportunities.",
         items: [],
       },
       {
-        intro: "Sustainable finance is no longer optional — it is a core market expectation.",
+        intro: "Sustainable finance is no longer optional, it is a core market expectation.",
         items: [],
       },
     ],

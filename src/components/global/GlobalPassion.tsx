@@ -5,7 +5,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Competitive Advantages",
-    desc: "Strong ESG practices can strengthen competitive positioning, considering stakeholder engagement — especially end consumers. In addition, when a company implements energy efficiencies and promotes an inclusive culture, it attracts more talent, becomes more resilient to changes in the business environment, and reduces operational costs and turnover.",
+    desc: "Strong ESG practices can strengthen competitive positioning, considering stakeholder engagement, especially end consumers. In addition, when a company implements energy efficiencies and promotes an inclusive culture, it attracts more talent, becomes more resilient to changes in the business environment, and reduces operational costs and turnover.",
   },
   {
     icon: Award,
@@ -15,7 +15,7 @@ const benefits = [
   {
     icon: DollarSign,
     title: "Increased Profitability",
-    desc: "Effective ESG practices can directly impact profitability. Companies that improve operational efficiency and reduce waste — whether in natural resource management or the supply chain — may reduce costs. Sustainable innovation can open new markets and attract consumers who value environmentally responsible products and services.",
+    desc: "Effective ESG practices can directly impact profitability. Companies that improve operational efficiency and reduce waste, whether in natural resource management or the supply chain, may reduce costs. Sustainable innovation can open new markets and attract consumers who value environmentally responsible products and services.",
   },
   {
     icon: BarChart3,
@@ -40,7 +40,7 @@ const GlobalPassion = () => {
             Our Passion
           </h2>
           <p className="text-primary-foreground/80 text-lg leading-relaxed">
-            ESG is more than an acronym — it is a strategic approach that integrates Environmental, Social and Governance factors. And it is no longer news that this perspective brings a range of positive benefits to a company, such as:
+            ESG is more than an acronym, it is a strategic approach that integrates Environmental, Social and Governance factors. And it is no longer news that this perspective brings a range of positive benefits to a company, such as:
           </p>
         </motion.div>
 
