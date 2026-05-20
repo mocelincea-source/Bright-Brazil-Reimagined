@@ -64,7 +64,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="section-padding bg-background">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Top divider line */}
         <div className="h-px bg-border mb-10" />
 

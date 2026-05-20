@@ -22,7 +22,7 @@ const founders = [
 const FoundersSection = () => {
   return (
     <section id="founders" className="section-padding">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
