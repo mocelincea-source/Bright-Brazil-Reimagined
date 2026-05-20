@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <section className="pt-12 pb-8 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <ClientsMarquee label="Clientes que confiam na B.Right" variant="dark" />
         </div>
