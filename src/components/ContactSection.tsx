@@ -1,14 +1,39 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", company: "", esg: "", email: "" });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.open(`https://wa.me/5511945916886?text=Olá! Meu nome é ${formData.name}, da empresa ${formData.company}. Gostaria de saber mais sobre ${formData.esg}.`, "_blank");
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("meeting-request", {
+        body: formData,
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+      toast({
+        title: "Solicitação recebida",
+        description: "Obrigada! Entraremos em contato em breve para agendar sua reunião.",
+      });
+      setFormData({ name: "", company: "", esg: "", email: "" });
+    } catch (err) {
+      console.error("meeting request failed:", err);
+      toast({
+        title: "Não foi possível enviar",
+        description: "Tente novamente em instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <section id="contact" className="section-padding">
@@ -42,6 +67,7 @@ const ContactSection = () => {
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                required
               />
               <input
                 type="text"
@@ -49,20 +75,25 @@ const ContactSection = () => {
                 value={formData.esg}
                 onChange={(e) => setFormData({ ...formData, esg: e.target.value })}
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                required
               />
               <input
                 type="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                title="Informe um e-mail válido"
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 required
               />
               <button
                 type="submit"
-                className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity mt-2 w-fit"
+                disabled={loading}
+                className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity mt-2 w-fit disabled:opacity-60"
               >
-                Enviar
+                {loading ? "Enviando..." : "Enviar"}
+
               </button>
             </form>
           </motion.div>
