@@ -9,6 +9,7 @@ import Global from "./pages/Global";
 import GlobalBlogPage from "./pages/GlobalBlog";
 import GlobalBlogPost from "./pages/GlobalBlogPost";
 import NotFound from "./pages/NotFound";
+import NewsletterPopup from "./components/NewsletterPopup";
 
 const queryClient = new QueryClient();
 
