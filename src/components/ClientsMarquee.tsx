@@ -8,6 +8,8 @@ import lotsGroup from "@/assets/clients/lots-group.png";
 import newExpo from "@/assets/clients/new-expo.png";
 import ravato from "@/assets/clients/ravato.png";
 import rodoil from "@/assets/clients/rodoil.png";
+import sertrading from "@/assets/clients/sertrading.png";
+import ultracargo from "@/assets/clients/ultracargo.png";
 
 const logos = [
   { src: syngenta, alt: "Syngenta" },
@@ -20,6 +22,8 @@ const logos = [
   { src: ravato, alt: "Ravato" },
   { src: rodoil, alt: "Rodoil" },
   { src: syngentaBrasil, alt: "Syngenta Brasil" },
+  { src: sertrading, alt: "Sertrading" },
+  { src: ultracargo, alt: "Ultracargo" },
 ];
 
 interface Props {
