@@ -67,6 +67,7 @@ const ContactSection = () => {
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                required
               />
               <input
                 type="text"
@@ -74,20 +75,25 @@ const ContactSection = () => {
                 value={formData.esg}
                 onChange={(e) => setFormData({ ...formData, esg: e.target.value })}
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                required
               />
               <input
                 type="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                title="Informe um e-mail válido"
                 className="bg-secondary border border-border rounded-xl px-5 py-3.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 required
               />
               <button
                 type="submit"
-                className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity mt-2 w-fit"
+                disabled={loading}
+                className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity mt-2 w-fit disabled:opacity-60"
               >
-                Enviar
+                {loading ? "Enviando..." : "Enviar"}
+
               </button>
             </form>
           </motion.div>
