@@ -48,7 +48,7 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          values: [[new Date().toISOString(), name.trim(), email.trim()]],
+          values: [[name.trim(), email.trim(), new Date().toISOString()]],
         }),
       },
     );
