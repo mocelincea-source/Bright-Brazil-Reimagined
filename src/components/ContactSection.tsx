@@ -1,14 +1,39 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", company: "", esg: "", email: "" });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.open(`https://wa.me/5511945916886?text=Olá! Meu nome é ${formData.name}, da empresa ${formData.company}. Gostaria de saber mais sobre ${formData.esg}.`, "_blank");
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("meeting-request", {
+        body: formData,
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+      toast({
+        title: "Solicitação recebida",
+        description: "Obrigada! Entraremos em contato em breve para agendar sua reunião.",
+      });
+      setFormData({ name: "", company: "", esg: "", email: "" });
+    } catch (err) {
+      console.error("meeting request failed:", err);
+      toast({
+        title: "Não foi possível enviar",
+        description: "Tente novamente em instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <section id="contact" className="section-padding">
