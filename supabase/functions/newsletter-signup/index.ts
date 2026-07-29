@@ -5,7 +5,7 @@ const corsHeaders = {
 };
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_sheets/v4";
-const SPREADSHEET_ID = "1UuAm9_c0Og2AVGMHAacz5JQRo3_B0Vf8XUg676D6ttQ";
+const SPREADSHEET_ID = "1nkVMqhDD0Vd-pDEMnmcEXaaNqVDoz5mE4F7yVRNRqLY";
 const RANGE = "'Página1'!A:C";
 
 Deno.serve(async (req) => {
