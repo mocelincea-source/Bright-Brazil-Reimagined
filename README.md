@@ -1,26 +1,39 @@
-# Bright Brazil Reimagined
+# 🌐 B.right (Bright Brazil) - Plataforma Web Corporativa
 
-Preciso refazer esse site exatamente com o mesmo conteudo só que com um design mais clean e moderno https://brightbrazil.co/en/
+🔗 **Acesse o projeto em produção:** [brightbrazil.co/en/](https://brightbrazil.co/en/)
 
-This project was built with [Lovable](https://lovable.dev).
+O B.right é a plataforma web corporativa da Bright Brazil, totalmente reestruturada para oferecer um design clean, moderno e focado em conversão e credibilidade institucional. 
 
-**Live app**: https://brightbrazil.lovable.app
+## ⚡ Desenvolvimento Ágil e Inovação (Vibe Coding)
 
-## Build with Lovable
+Este projeto é um caso de sucesso na aplicação de metodologias modernas de desenvolvimento acelerado. Utilizando ferramentas avançadas baseadas em Inteligência Artificial (como Lovable e o editor Cursor), foi possível refatorar toda a interface legada, garantindo alta fidelidade ao conteúdo original, mas com uma arquitetura front-end completamente modernizada.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ca16d926-4c36-4bcf-8d38-dbf40b924ded).
+## 🛠️ Tecnologias e Infraestrutura
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+A stack foi escolhida para garantir carregamento instantâneo, SEO otimizado e facilidade de manutenção:
 
-## Development
+*   **Core:** React com Vite (Build super rápido e HMR otimizado).
+*   **Linguagem:** TypeScript para tipagem estática e código seguro.
+*   **Estilização e UI:** Tailwind CSS integrado com componentes shadcn/ui, garantindo uma interface modular e responsiva.
+*   **Backend as a Service (BaaS):** Supabase (preparado para expansões futuras de banco de dados e autenticação).
+*   **Infraestrutura:** Gestão completa de domínios corporativos (.co) e automação de deploy.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## 🏗️ Como executar localmente
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Allan14GDS/brightbrazil.git](https://github.com/Allan14GDS/brightbrazil.git)
+
+   
+---Acesse a pasta do projeto:
+cd brightbrazil
+
+---Instale as dependências:
+npm install
+# ou
+bun install
+
+---Inicie o servidor de desenvolvimento Vite:
 npm run dev
-```
+# ou
+bun dev
