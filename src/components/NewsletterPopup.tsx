@@ -4,8 +4,6 @@ import { X, Mail, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
-const STORAGE_KEY = "bright-newsletter-popup";
-
 const NewsletterPopup = () => {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -13,13 +11,11 @@ const NewsletterPopup = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY)) return;
     const id = setTimeout(() => setOpen(true), 1200);
     return () => clearTimeout(id);
   }, []);
 
   const close = () => {
-    localStorage.setItem(STORAGE_KEY, "seen");
     setOpen(false);
   };
 
