@@ -44,11 +44,11 @@ const GlobalFounders = () => {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="glass-card overflow-hidden"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[2/3] overflow-hidden">
                 <img
                   src={founder.image}
                   alt={founder.name}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-contain object-center"
                 />
               </div>
               <div className="p-8">

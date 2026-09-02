@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import about1 from "@/assets/about-1.jpg";
+import about1Alt from "@/assets/about-1_1.jpg";
 import about2 from "@/assets/about-2.jpg";
+import about2Alt from "@/assets/about-2_2.jpg";
+
+const card1Images = [about1, about1Alt];
+const card2Images = [about2, about2Alt];
+const SLIDE_INTERVAL_MS = 4000;
 
 const tabs = [
   {
@@ -60,7 +66,16 @@ const stats = [
 
 const AboutSection = () => {
   const [active, setActive] = useState(tabs[0].key);
+  const [slide, setSlide] = useState(0);
   const current = tabs.find((t) => t.key === active)!;
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setSlide((i) => (i + 1) % card1Images.length),
+      SLIDE_INTERVAL_MS,
+    );
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <section id="about" className="section-padding bg-background">
@@ -127,29 +142,19 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-4 gap-4"
         >
-          <div className="rounded-3xl overflow-hidden aspect-square">
-            <img
-              src={about1}
-              alt="Profissional B.Right"
-              loading="lazy"
-              width={800}
-              height={800}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <ImageCarouselCard
+            images={card1Images}
+            index={slide}
+            alt="Profissional B.Right"
+          />
 
           <StatCard {...stats[0]} />
 
-          <div className="rounded-3xl overflow-hidden aspect-square">
-            <img
-              src={about2}
-              alt="Sustentabilidade corporativa"
-              loading="lazy"
-              width={800}
-              height={800}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <ImageCarouselCard
+            images={card2Images}
+            index={slide}
+            alt="Sustentabilidade corporativa"
+          />
 
           <StatCard {...stats[1]} />
         </motion.div>
@@ -157,6 +162,33 @@ const AboutSection = () => {
     </section>
   );
 };
+
+const ImageCarouselCard = ({
+  images,
+  index,
+  alt,
+}: {
+  images: string[];
+  index: number;
+  alt: string;
+}) => (
+  <div className="relative rounded-3xl overflow-hidden aspect-square">
+    {images.map((src, i) => (
+      <img
+        key={src}
+        src={src}
+        alt={i === index ? alt : ""}
+        aria-hidden={i !== index}
+        loading="lazy"
+        width={800}
+        height={800}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+          i === index ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    ))}
+  </div>
+);
 
 const StatCard = ({
   value,
