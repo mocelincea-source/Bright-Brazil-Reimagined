@@ -22,8 +22,7 @@ A stack foi escolhida para garantir carregamento instantâneo, SEO otimizado e f
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/Allan14GDS/brightbrazil.git](https://github.com/Allan14GDS/brightbrazil.git)
-
+   git clone [https://github.com//mocelincea-source/Bright-Brazil-Reimagined.git](https://github.com//mocelincea-source/Bright-Brazil-Reimagined.git)
    
 ---Acesse a pasta do projeto:
 cd brightbrazil
