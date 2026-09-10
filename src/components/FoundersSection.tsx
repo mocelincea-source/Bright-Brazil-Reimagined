@@ -42,21 +42,24 @@ const FoundersSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="glass-card overflow-hidden"
             >
-              <div className="aspect-[2/3] overflow-hidden">
-                <img
-                  src={founder.image}
-                  alt={founder.name}
-                  className="w-full h-full object-contain object-center"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="font-display text-2xl text-foreground mb-4">{founder.name}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm mb-6">{founder.bio}</p>
-                <div className="flex flex-col gap-1 text-sm">
-                  <span className="text-muted-foreground">{founder.phone}</span>
-                  <a href={`mailto:${founder.email}`} className="text-primary hover:underline">{founder.email}</a>
+              <div className="glass-card overflow-hidden">
+                <div className="aspect-[2/3] overflow-hidden">
+                  <img
+                    src={founder.image}
+                    alt={founder.name}
+                    className="w-full h-full object-cover object-center"
+                    decoding="async"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="font-display text-2xl text-foreground mb-4">{founder.name}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm mb-6">{founder.bio}</p>
+                  <div className="flex flex-col gap-1 text-sm">
+                    <span className="text-muted-foreground">{founder.phone}</span>
+                    <a href={`mailto:${founder.email}`} className="text-primary hover:underline">{founder.email}</a>
+                  </div>
                 </div>
               </div>
             </motion.div>
